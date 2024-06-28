@@ -1,4 +1,5 @@
 import './style.css'
+import Plotly from "plotly.js-dist-min"
 
 function convertToJSFunction(mathFunc) {
   // Reemplazar funciones matemáticas con funciones de JavaScript
