@@ -34,7 +34,8 @@ function integrateSimpson(func, a, b, n) {
 }
 
 async function calculate(){
-  const func = document.getElementById('function').value;
+  const funcString = document.getElementById('function').value;
+  const func = convertToJSFunction(funcString);
   const a = parseFloat(document.getElementById('a').value);
   const b = parseFloat(document.getElementById('b').value);
   const n = 100; // Número de subdivisiones para la integración numérica
