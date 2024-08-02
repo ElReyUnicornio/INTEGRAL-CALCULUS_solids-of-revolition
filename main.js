@@ -7,9 +7,13 @@ function convertToJSFunction(mathFunc) {
       .replace(/sin/g, 'Math.sin')
       .replace(/cos/g, 'Math.cos')
       .replace(/tan/g, 'Math.tan')
+      .replace(/arcoS/g, 'Math.asin')
+      .replace(/arcoC/g, 'Math.acos')
+      .replace(/arcoT/g, 'Math.atan')
       .replace(/log/g, 'Math.log')
       .replace(/ln/g, 'Math.log')
       .replace(/sqrt/g, 'Math.sqrt')
+      .replace(/abs/g, 'Math.abs')
       .replace(/pi/g, 'Math.PI')
       .replace(/\^/g, '**'); // Reemplazar ^ con ** para exponentes
 
@@ -105,8 +109,7 @@ function calculateAndPlot() {
   let layout = {
       scene: {
           xaxis: { title: 'X' },
-          yaxis: { title: 'Y' },
-          zaxis: { title: 'Z' }
+          yaxis: { title: 'Y' }
       }
   };
 
