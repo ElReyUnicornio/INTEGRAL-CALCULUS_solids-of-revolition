@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,54 +6,249 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <body class="min-h-screen bg-white dark:bg-gray-800 flex items-center justify-center">
-    <div class="w-11/12 p-5 flex flex-col bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Solidos en revolución</h5>
+  <body
+    class="min-h-screen bg-white dark:bg-gray-800 flex flex-col items-center justify-start"
+  >
+    <!--Background-->
+    <div
+      class="absolute -z-10 bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_90%_90%_at_50%_0%,#000_70%,transparent_110%)]"
+    ></div>
+
+    <!--Title-->
+
+    <h1
+      class="mx-auto my-20 text-6xl text-center font-extrabold tracking-tight bg-gradient-to-b underline from-purple-600 to-blue-500 bg-clip-text text-transparent"
+    >
+      Sólidos en revolución
+    </h1>
+
+    <!--Card-->
+    <div
+      class="w-11/12 mb-16 p-5 flex flex-col bg-white border border-gray-300 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 relative z-50"
+    >
       <!-- Inputs -->
-      <form id="form" class="flex w-full justify-between items-center">
-        <div class="mb-5">
-          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Función</label>
-          <input type="text" id="function" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="sin(x)" required />
+      <form
+        id="form"
+        class="flex w-full justify-between items-center flex-col md:flex-row"
+      >
+        <div class="mb-5 w-full mx-0 md:mx-2">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Función</label
+          >
+          <input
+            type="text"
+            id="function"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="sin(x)"
+            required
+          />
         </div>
 
-        <div class="mb-5">
-          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Límite inferior</label>
-          <input type="number" id="a" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="1" required />
+        <div class="mb-5 w-full mx-0 md:mx-2">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Límite inferior</label
+          >
+          <input
+            type="number"
+            id="a"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="1"
+            required
+          />
         </div>
 
-        <div class="mb-5">
-          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Límite superior</label>
-          <input type="number" id="b" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="3" required />
+        <div class="mb-5 w-full mx-0 md:mx-2">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Límite superior</label
+          >
+          <input
+            type="number"
+            id="b"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="3"
+            required
+          />
         </div>
 
-        <button class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Calcular</button>
+        <button
+          class="w-full mx-0 md:mx-2 md:my-auto text-white font-bold bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        >
+          Calcular
+        </button>
       </form>
-      <!-- Result -->
-      <p id="result" class="mb-3 text-lg text-gray-500 md:text-xl dark:text-gray-400"></p>
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-              <th scope="col" class="px-6 py-3">
-                Gráfica de la función
-              </th>
-              <th scope="col" class="px-6 py-3">
-                Gráfica del sólido en revolución
-              </th>
-            </thead>
-            <tbody>
-              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  <div id="graph"></div>
-                </th>
-                <td class="px-6 py-4">
-                  <div id="solid"></div>
-                </td>
-              </tr>
-            </tbody>
-        </table>
+
+      <!-- Tabs -->
+
+      <div class="border-b border-gray-200 dark:border-gray-700">
+        <ul
+          class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400"
+        >
+          <li class="me-2">
+            <a
+              id="tab-0"
+              data-tab="0"
+              class="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg cursor-pointer hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 [&.active]:text-blue-600 [&.active]:border-blue-600 group"
+            >
+              <svg
+                class="w-4 h-4 me-2 text-gray-400 group-hover:text-gray-500 group-[&.active]:text-blue-600 group-[&.active]:dark:text-blue-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 18 18"
+              >
+                <path
+                  d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"
+                />
+              </svg>
+              Resultados
+            </a>
+          </li>
+          <li class="me-2">
+            <a
+              id="tab-1"
+              data-tab="1"
+              class="inline-flex items-center justify-center p-4 border-b-2 rounded-t-lg cursor-pointer [&.active]:text-blue-600 [&.active]:border-blue-600 group"
+              aria-current="page"
+            >
+              <svg
+                class="w-4 h-4 me-2 text-gray-400 group-hover:text-gray-500 group-[&.active]:text-blue-600 group-[&.active]:dark:text-blue-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 4v15a1 1 0 0 0 1 1h15M8 16l2.5-5.5 3 3L17.273 7 20 9.667"
+                />
+              </svg>
+
+              Función
+            </a>
+          </li>
+          <li class="me-2">
+            <a
+              id="tab-2"
+              data-tab="2"
+              class="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg cursor-pointer hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 [&.active]:text-blue-600 [&.active]:border-blue-600 group"
+            >
+              <svg
+                class="w-4 h-4 me-2 text-gray-400 group-hover:text-gray-500 group-[&.active]:text-blue-600 group-[&.active]:dark:text-blue-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M2.00726 13.2703L2.00726 4.72854"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M10.0021 17L10.0021 8.25484"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M17.9969 13.407L17.9969 5.13643"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M2.00726 4.63168L9.86301 1.00001"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M10.0093 8.18704L18 4.80633"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M10.0093 17L18 13.6193"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M2 13.3392L9.85575 16.9709"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M2.08197 4.93304L10.0726 8.31376"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M9.92737 1.0011L17.9828 4.7251"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              Sólido en revolución
+            </a>
+          </li>
+        </ul>
       </div>
 
+      <!-- Graphs -->
+
+      <div
+        class="w-full h-[50vh] mt-5 border border-gray-300 rounded-md relative overflow-hidden"
+      >
+        <div id="carousel" class="w-[300%] h-full flex relative z-10">
+          <div class="w-1/3 min-h-full flex items-center justify-center">
+            <div
+              id="results"
+              class="w-full h-full flex justify-center items-center flex-col opacity-0 md:flex-row"
+            >
+              <div
+                class="w-11/12 md:w-1/3 h-64 flex flex-col bg-gradient-to-br from-green-400 to-blue-600 rounded-lg m-5 justify-center items-center"
+              >
+                <h3 class="text-white text-3xl font-bold">Superficie:</h3>
+                <p id="superficie" class="text-white mt-4 text-xl">170.989</p>
+              </div>
+              <div
+                class="w-11/12 md:w-1/3 h-64 flex flex-col bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg m-5 justify-center items-center"
+              >
+                <h3 class="text-white text-3xl font-bold">Volumen:</h3>
+                <p id="volumen" class="text-white mt-4 text-xl">170.989</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/3 min-h-full flex items-center justify-center">
+            <div id="graph" class="w-full h-full"></div>
+          </div>
+          <div class="w-1/3 min-h-full flex items-center justify-center">
+            <div id="solid" class="w-full h-full"></div>
+          </div>
+        </div>
+        <span
+          class="absolute z-0 w-full h-full text-center top-0 left-0 flex justify-center items-center bg-gradient-to-br from-purple-600 to-blue-500 bg-clip-text text-transparent text-2xl font-bold"
+        >
+          Aquí aparecerán los resultados...
+        </span>
+      </div>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
