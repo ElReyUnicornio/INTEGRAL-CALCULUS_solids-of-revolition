@@ -38,8 +38,13 @@ function convertToJSFunction(mathFunc) {
   return jsFunc;
 }
 
+function createFunction(func) {
+  return new Function("x", `return ${func};`);
+}
+
 function evaluateFunction(func, x) {
-  return eval(func);
+  const safeFunc = createFunction(func);
+  return safeFunc(x);
 }
 
 function integrateSimpson(func, a, b, n) {
