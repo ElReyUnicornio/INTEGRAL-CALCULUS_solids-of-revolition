@@ -60,7 +60,7 @@ function integrateSimpson(func, a, b, n) {
   return (h / 3) * sum;
 }
 
-async function calculateSurface() {
+async function calculateVolume() {
   const funcString = document.getElementById("function").value;
   const func = convertToJSFunction(funcString);
   const a = parseFloat(document.getElementById("a").value);
@@ -70,12 +70,22 @@ async function calculateSurface() {
   return Math.PI * integrateSimpson(`${func} * ${func}`, a, b, n);
 }
 
+async function calculateSurface() {
+  const funcString = document.getElementById("function").value;
+  const func = convertToJSFunction(funcString);
+  const a = parseFloat(document.getElementById("a").value);
+  const b = parseFloat(document.getElementById("b").value);
+  const n = b - a > 100 ? 500 : 100; // Número de subdivisiones para la integración numérica
+
+  return Math.PI * integrateSimpson(`Math.sqrt(1 + (${func})^2)`, a, b, n);
+}
+
 function calculateAndPlot() {
   const funcString = document.getElementById("function").value;
   const func = convertToJSFunction(funcString);
   const a = parseFloat(document.getElementById("a").value);
   const b = parseFloat(document.getElementById("b").value);
-  const n = 100; // Número de rectangulos en las sumas de riemann
+  const n = b - a > 100 ? 500 : 100; // Número de rectangulos en las sumas de riemann
   const dx = (b - a) / n;
 
   let volume = 0;
@@ -151,9 +161,12 @@ function calculateAndPlot() {
   Plotly.newPlot("solid", data2, layout2);
 
   document.getElementById("results").style.opacity = 1;
-  document.getElementById("volumen").innerText = volume.toFixed(4);
   calculateSurface().then((surface) => {
-    document.getElementById("superficie").innerText = surface.toFixed(4);
+    document.getElementById("superficie").innerText =
+      surface.toFixed(4) + " u^2";
+  });
+  calculateVolume().then((volume) => {
+    document.getElementById("volumen").innerText = volume.toFixed(4) + " u^3";
   });
 
   changeTab({ target: { dataset: { tab: 2 } } });
